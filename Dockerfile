@@ -17,4 +17,4 @@ RUN pip install -r requirements.txt
 EXPOSE 5000
 
 # Run server
-CMD ["gunicorn", "run:app", "-b", "0.0.0.0:5000"]
+CMD ["gunicorn", "index:app", "-b", "0.0.0.0:5000"]
