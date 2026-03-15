@@ -16,5 +16,5 @@ RUN pip install -r requirements.txt
 # Expose port
 EXPOSE 5000
 
-# Run server
-CMD ["gunicorn", "index:app", "-b", "0.0.0.0:5000"]
+# Run server (bind to $PORT if set)
+CMD ["sh", "-lc", "gunicorn index:app -b 0.0.0.0:${PORT:-5000}"]

@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: flask-ai
+    env: docker
+    plan: free
+    dockerfilePath: Dockerfile
+    # Optionally set environment variables here (e.g., CORS_ORIGINS).
+    # envVars:
+    #   - key: CORS_ORIGINS
+    #     value: "*"
